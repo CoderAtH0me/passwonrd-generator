@@ -15,11 +15,32 @@
       <div id="sub-head">Never use insecure password again.</div>
       <br />
       <br />
-      <label for="myCheck">
+
+      <label class="toggle" for="myCheck">
+        <input class="toggle__input" type="checkbox" id="myCheck" onclick="whatCharacters()">
+        <div class="toggle__fill"></div>
+        Use common symbols only (Aa-Zz, 0-9)
+      </label>
+
+
+      <!-- 
+        
+        
+        
+        <label class="switch" for="myCheck">
         <input type="checkbox" id="characterCheck" onclick="whatCharacters()">
         Use common symbols only (Aa-Zz, 0-9)
         <span class="slider"></span>
       </label> 
+    
+    
+    
+    
+    -->
+
+
+
+      <br>
       <button onclick="getPass(outputOne), getPass(outputTwo)">
         Generate passwords
       </button>
