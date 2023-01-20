@@ -25,6 +25,18 @@ function getPass (output) {
         let randomIndex = Math.floor(Math.random()*characters.length);
         password += characters[randomIndex];
     }
+    output.style.display = "block";
     output.textContent = password;
 }
 
+function copyFn (element) {
+  let copyText = element.textContent;
+  navigator.clipboard.writeText(copyText);
+
+  let tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText;
+}
+function outFunc() {
+  let tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}

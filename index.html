@@ -25,28 +25,27 @@
 
       <!-- 
         
-        
-        
         <label class="switch" for="myCheck">
         <input type="checkbox" id="characterCheck" onclick="whatCharacters()">
         Use common symbols only (Aa-Zz, 0-9)
         <span class="slider"></span>
       </label> 
     
-    
-    
-    
     -->
 
 
 
       <br>
-      <button onclick="getPass(outputOne), getPass(outputTwo)">
+      <button class="generate-btn" onclick="getPass(outputOne), getPass(outputTwo)">
         Generate passwords
       </button>
-      <div id="out-pass">
-        <div class="out-line" id="output-one"></div>
-        <div class="out-line" id="output-two"></div>
+      <div class="tooltip" id="out-pass">
+        <button class="out-btn" id="output-one" onmouseout="outFunc()" style="display:none" onclick="copyFn(outputOne)">
+          <!-- <span class="tooltiptext" id="myTooltip">Copy to clipboard</span> -->
+        </button>
+        <button class="out-btn" id="output-two" onmouseout="outFunc()" style="display:none" onclick="copyFn(outputTwo)">
+          <!-- <span class="tooltiptext" id="myTooltip">Copy to clipboard</span> -->
+        </button>
       </div>
     </div>
     <script src="index.js"></script>

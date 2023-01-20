@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: #1f2937;
-  color: white;
+  color: #ffffff;
   text-shadow: 0px 0px 1px black;
 }
 .container {
@@ -15,18 +15,20 @@ body {
   /* border: 1px solid white; */
 }
 h1 {
-  margin: 0px 7px;
+  margin: 0px 8px;
   font-size: 250%;
 }
 #sub-head {
   font-weight: lighter;
-  margin: 0 7px;
+  margin: 0 8px;
   color: #d5d4d8;
   font-size: 150%;
 }
 .green-color {
   color: #4adf86;
 }
+
+
 
 
 
@@ -47,6 +49,7 @@ h1 {
 }
 
 .toggle__fill {
+  margin: 0px 8px;
   position: relative;
   width: var(--width);
   height: var(--height);
@@ -81,8 +84,10 @@ h1 {
 
 
 
-button {
-  margin: 0 7px;
+
+
+.generate-btn {
+  margin: 0 8px;
   padding: 5px 8px;
   background-color: #4adf86;
   border: none;
@@ -95,6 +100,9 @@ button {
 button:hover {
   background-color: #065f46;
 }
+button:active {
+  background-color: #021f17;
+}
 #out-pass {
   border-top: 1px solid #2f3e53;
   padding: 7px 0;
@@ -102,11 +110,36 @@ button:hover {
   justify-content: space-between;
   width: 100%;
 }
-.out-line {
-  font-size: 16px;
+.out-btn {
+  color:#ffffff;
+  width: 46%;
+  min-height: 25px;
+  font-size: smaller;
   border: none;
   border-radius: 5px;
   margin: 5px;
   padding: 6px 12px;
   background-color: #273549;
+  cursor: pointer;
+}
+.out-btn:active {
+  background-color: #021f17;
+}
+.out-btn:before {
+  content:"Copied";
+  position:absolute;
+  top: -50px;
+  right: 0px;
+  background: #021f17;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.out-btn::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
 }
