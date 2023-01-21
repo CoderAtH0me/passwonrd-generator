@@ -29,14 +29,30 @@ function getPass (output) {
     output.textContent = password;
 }
 
+
+
+// outputOne.addEventListener("click", function() {
+//   let input = outputOne.textContent;
+//   // input.select();
+//   outputOne.classList.add("active");
+// });
+
+
+
+
+
+
+
+
+
+
 function copyFn (element) {
   let copyText = element.textContent;
   navigator.clipboard.writeText(copyText);
-
-  let tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText;
-}
-function outFunc() {
-  let tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
+  let outBtn = document.querySelector(".out-btn");
+  outBtn.classList.add("active");
+  window.getSelection().removeAllRanges();
+  setTimeout(function() {
+    outBtn.classList.remove("active");
+  }, 2500);
 }

@@ -11,40 +11,22 @@
     <div class="container">
       <h1>Generate a</h1>
       <h1 class="green-color">random password</h1>
-      <br />
       <div id="sub-head">Never use insecure password again.</div>
       <br />
       <br />
-
       <label class="toggle" for="myCheck">
         <input class="toggle__input" type="checkbox" id="myCheck" onclick="whatCharacters()">
         <div class="toggle__fill"></div>
         Use common symbols only (Aa-Zz, 0-9)
       </label>
-
-
-      <!-- 
-        
-        <label class="switch" for="myCheck">
-        <input type="checkbox" id="characterCheck" onclick="whatCharacters()">
-        Use common symbols only (Aa-Zz, 0-9)
-        <span class="slider"></span>
-      </label> 
-    
-    -->
-
-
-
       <br>
       <button class="generate-btn" onclick="getPass(outputOne), getPass(outputTwo)">
         Generate passwords
       </button>
       <div class="tooltip" id="out-pass">
-        <button class="out-btn" id="output-one" onmouseout="outFunc()" style="display:none" onclick="copyFn(outputOne)">
-          <!-- <span class="tooltiptext" id="myTooltip">Copy to clipboard</span> -->
+        <button class="out-btn" id="output-one" style="display:none" onclick="copyFn(outputOne)">
         </button>
-        <button class="out-btn" id="output-two" onmouseout="outFunc()" style="display:none" onclick="copyFn(outputTwo)">
-          <!-- <span class="tooltiptext" id="myTooltip">Copy to clipboard</span> -->
+        <button class="out-btn" id="output-two" style="display:none" onclick="copyFn(outputTwo)">
         </button>
       </div>
     </div>

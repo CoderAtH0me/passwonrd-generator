@@ -16,13 +16,13 @@ body {
 }
 h1 {
   margin: 0px 8px;
-  font-size: 250%;
+  font-size: 40px;
 }
 #sub-head {
   font-weight: lighter;
-  margin: 0 8px;
+  margin: 8px 8px;
   color: #d5d4d8;
-  font-size: 150%;
+  font-size: 22px;
 }
 .green-color {
   color: #4adf86;
@@ -87,7 +87,7 @@ h1 {
 
 
 .generate-btn {
-  margin: 0 8px;
+  margin: 10px 8px 0;
   padding: 5px 8px;
   background-color: #4adf86;
   border: none;
@@ -103,9 +103,13 @@ button:hover {
 button:active {
   background-color: #021f17;
 }
+.tooltip {
+  position: relative;
+}
 #out-pass {
   border-top: 1px solid #2f3e53;
-  padding: 7px 0;
+  margin-top: 12px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -128,18 +132,26 @@ button:active {
 .out-btn:before {
   content:"Copied";
   position:absolute;
-  top: -50px;
-  right: 0px;
+  top: -10px;
+  right: 131px;
   background: #021f17;
   padding: 8px 10px;
   border-radius: 20px;
   font-size: 15px;
+  display: none;
 }
 .out-btn::after {
   content: "";
   position: absolute;
-  top: -20px;
-  right: 25px;
+  top: -10px;
+  left: 131px;
   width: 10px;
   height: 10px;
+  background: #021f17;
+  transform: rotate(45deg);
+  display: none;
+}
+.out-btn:active:before,
+.out-btn:active::after {
+  display: flex;
 }
